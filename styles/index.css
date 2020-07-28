@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600&display=swap');
+
+:root {
+  --mainBackground: #FFFFFF; 
+  --ligthGray: #EEEEEE;
+  --titleFont: 'Oswald', sans-serif;
+  --titleSize: 19px;
+  --subtitleSize: 17px;
+  --paragraphSize: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+  outline: none;
+  z-index: 5;
+}
+
+a {
+  color: var(--mainBackground);
+}
+
+a:visited {
+  color: var(--mainBackground);
+}
+
+body {
+  background-color: var(--ligthGray);
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.main__container {
+  display: grid;
+  width: 850px;
+  height: 1098px;
+  background-color: var(--mainBackground);
+  grid-template-columns: 1fr 2fr;
+  font-family: var(--titleFont);
+  overflow: hidden;
+}
+
+.aboutme__container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: column;
+  background-size: cover;
+  padding: 2em;
+  color: var(--mainBackground);
+}
+
+.aboutme__container::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(40%);
+  background-image: url('../assets/mountain.jpg');
+  background-size: cover;
+  z-index: 0;
+}
+
+.photograph__container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 100%;
+  border: solid 2px var(--mainBackground);
+  margin: 1em auto 2em;
+}
+
+.photograph {
+  object-fit: cover;
+  width: 100%;
+}
+
+.name {
+  font-weight: 300;
+  font-size: 3em;
+  line-height: 1.2em;
+}
+
+.profile {
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+}
+
+.title {
+  font-weight: 400;
+  font-size: var(--titleSize);
+  margin-bottom: 5px;
+}
+
+.about__paragraph {
+  font-weight: 300;
+  font-size: var(--paragraphSize);
+  margin-bottom: 10px;
+}
+
+.skills__list {
+  margin-bottom: 10px;
+}
+
+.skills__list--item {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--paragraphSize);
+  font-weight: 300;
+}
+
+.info__container {
+  padding: 2em;
+}
+
+.info__title {
+  margin-bottom: .5em;
+}
+
+.info__item {
+  margin-bottom: 1em;
+}
+
+.item__title {
+  font-size: var(--titleFont);
+  font-weight: 400;
+}
+
+.item__subtitle {
+  font-size: var(--subtitleSize);
+  font-weight: 600;
+}
+
+.item__description {
+  font-weight: 300;
+  font-size: var(--paragraphSize);
+}
+
+@media print {
+  .main__container {
+    width: 100%;
+    height: 100%;
+  }
+}
